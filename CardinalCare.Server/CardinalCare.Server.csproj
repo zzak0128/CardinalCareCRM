@@ -10,4 +10,9 @@
   <ItemGroup>
     <Folder Include="Components\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Model.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
