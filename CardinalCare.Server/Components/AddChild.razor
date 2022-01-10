@@ -2,6 +2,43 @@
 
 <h3>Register Child</h3>
 
-@code {
+<EditForm Model="NewChild">
+    <div class="form-group">
+        <label class="form-label" for="firstname">First Name</label>
+        <InputText id="firstname" class="form-control" @bind-Value="NewChild.FirstName" required></InputText>
+    </div>
 
+    <div class="form-group">
+        <label class="form-label" for="midname">Middle Name</label>
+        <InputText id="midname" class="form-control" @bind-Value="NewChild.MidName"></InputText>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="lastname">Last Name</label>
+        <InputText id="lastname" class="form-control" @bind-Value="NewChild.LastName" required></InputText>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="birthday">Birthday</label>
+        <InputDate id="birthday" class="form-control" @bind-Value="NewChild.Birthday" required></InputDate>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="diet-restrictions">Dietary Restrictions</label>
+        <InputTextArea id="diet-restrictions" class="form-control" @bind-Value="NewChild.DietRestrictions" placeholder="List any dietary restrictions here..."></InputTextArea>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="allergies">Allergies</label>
+        <InputTextArea id="allergies" class="form-control" @bind-Value="NewChild.Allergies" placeholder="List any allergies here..."></InputTextArea>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-secondary">Cancel</button>
+    </div>
+</EditForm>
+
+@code {
+    private Child NewChild = new Child();
 }
