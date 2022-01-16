@@ -2,8 +2,28 @@
 
 <EditForm Model="NewWorkplace">
     @*Name*@
-    @*State*@
+    <div class="form-group">
+        <label class="form-label" for="name">Employer</label>
+        <InputText id="name" class="form-control" @bind-Value="NewWorkplace.Name" required></InputText>
+    </div>
+
+    @*City*@
+    <div class="form-group">
+        <label class="form-label" for="city">City</label>
+        <InputText id="city" class="form-control" @bind-Value="NewWorkplace.City"></InputText>
+    </div>
+
     @*Phone Number*@
+    <div class="form-group">
+        <label class="form-label" for="phone-number">Phone Number</label>
+        <InputText id="phone-number" class="form-control" @bind-Value="NewWorkplace.Number"></InputText>
+    </div>
+
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Add New</button>
+        <button class="btn btn-secondary">Cancel</button>
+    </div>
 </EditForm>
 
 @code {
