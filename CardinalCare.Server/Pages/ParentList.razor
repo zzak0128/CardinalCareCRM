@@ -1,9 +1,33 @@
 ﻿@page "/parent-list"
 
 <h3>Registered Parents</h3>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var parent in parents)
+            {
+                <tr>
+                    <td>@parent.ParentId</td>
+                    <td>@parent.FirstName</td>
+                    <td>@parent.LastName</td>
+                    @*Add address here*@
+                    <td>@parent.PhoneNumber</td>
+                    @*Add Workplace Name here*@
+                </tr>
+            }
+    </tbody>
+</table>
 
-<AddParent />
 
 @code {
+    List<Parent> parents = new List<Parent>();
+
 
 }
