@@ -9,18 +9,18 @@ namespace CardinalCare.Model.Services
 {
     public class ChildServices
     {
-        private ChildDbContext dbContext;
+        private ChildDbContext context;
 
-        public ChildServices(ChildDbContext dbContext)
+        public ChildServices(ChildDbContext context)
         {
-            this.dbContext = dbContext;
+            this.context = context;
         }
 
 
         #region GetChildren
         public async Task<List<Child>> GetChildAsync()
         {
-            return await dbContext.Children.ToListAsync();
+            return await context.Children.ToListAsync();
         }
         #endregion
 
@@ -30,8 +30,8 @@ namespace CardinalCare.Model.Services
         {
             try
             {
-                dbContext.Children.Add(child);
-                await dbContext.SaveChangesAsync();
+                context.Children.Add(child);
+                await context.SaveChangesAsync();
             }
             catch (Exception)
             {
@@ -47,11 +47,11 @@ namespace CardinalCare.Model.Services
         {
             try
             {
-                var productExist = dbContext.Children.FirstOrDefault(c => c.ChildId == child.ChildId);
+                var productExist = context.Children.FirstOrDefault(c => c.ChildId == child.ChildId);
                 if (productExist != null)
                 {
-                    dbContext.Update(child);
-                    await dbContext.SaveChangesAsync();
+                    context.Update(child);
+                    await context.SaveChangesAsync();
                 }
             }
             catch (Exception)
@@ -69,8 +69,8 @@ namespace CardinalCare.Model.Services
         {
             try
             {
-                dbContext.Children.Remove(child);
-                await dbContext.SaveChangesAsync();
+                context.Children.Remove(child);
+                await context.SaveChangesAsync();
             }
             catch (Exception)
             {
@@ -78,6 +78,5 @@ namespace CardinalCare.Model.Services
             }
         }
         #endregion
-
     }
 }
