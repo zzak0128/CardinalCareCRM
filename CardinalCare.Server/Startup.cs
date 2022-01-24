@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CardinalCare.Model.Context;
+using CardinalCare.Model.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +30,11 @@ namespace CardinalCare.Server
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddDbContext<ChildDbContext>(options =>
+            {
+                options.UseSqlite("Data source=Children.db");
+            });
+            services.AddScoped<ChildServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
