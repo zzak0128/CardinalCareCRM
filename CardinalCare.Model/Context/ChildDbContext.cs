@@ -9,11 +9,17 @@ namespace CardinalCare.Model.Context
         public ChildDbContext(DbContextOptions<ChildDbContext> options)
             : base(options)
         {
-
         }
 
         public DbSet<Child> Children { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Child>().HasData(GetChildren());
+            base.OnModelCreating(modelBuilder);
+        }
+
+        #region Populate children list
         private List<Child> GetChildren()
         {
             return new List<Child>
@@ -23,5 +29,6 @@ namespace CardinalCare.Model.Context
                 new Child { ChildId = 2, FirstName = "Camden", MidName = "Lane", LastName = "Zak", Birthday = DateTime.Now, DietRestrictions = "N/A", Allergies = "N/A" }
             };
         }
+        #endregion
     }
 }
