@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CardinalCare.Model
 {
     public class Invoice
-    { 
+    {
+        [Key]
         public int InvoiceId { get; set; }
+        [DataType(DataType.Currency)]
         public double AmountDue { get; set; }
+        [DataType(DataType.Currency)]
         public double AmountPaid { get; set; }
         public bool IsPaidInFull { get; set; }
         public DateTime DateDue { get; set; }
