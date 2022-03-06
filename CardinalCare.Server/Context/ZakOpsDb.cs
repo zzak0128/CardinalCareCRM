@@ -20,7 +20,7 @@ namespace CardinalCare.Server.Context
         public DbSet<VaccinationFile> VaccinationFiles { get; set; }
         public DbSet<Workplace> Workplaces { get; set; }
         public DbSet<EnrollmentStatus> Enrollment { get; set; }
-        public DbSet<EnrollmentType> enrollmentTypes { get; set; }
+        public DbSet<EnrollmentType> EnrollmentTypes { get; set; }
 
         #region DbSet
 

@@ -13,7 +13,7 @@
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Context\" />
-    <Folder Include="Services\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Model.csproj">
