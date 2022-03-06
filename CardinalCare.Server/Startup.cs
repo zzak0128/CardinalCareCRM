@@ -30,11 +30,10 @@ namespace CardinalCare.Server
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddDbContext<ChildDbContext>(options =>
+            services.AddDbContext<ZakOpsDb>(options =>
             {
-                options.UseSqlite("Data source=Children.db");
+                options.UseSqlServer(Configuration.GetConnectionString("zakops"));
             });
-            services.AddScoped<ChildServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

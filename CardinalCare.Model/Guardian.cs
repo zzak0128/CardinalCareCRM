@@ -1,17 +1,14 @@
 ﻿using System;
 namespace CardinalCare.Model
 {
-    public class Parent
+    public class Guardian
     {
-        public int ParentId { get; set; }
+        public int GuardianId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        // Address prop
+        public Address Address { get; set; }
         public string PhoneNumber { get; set; }
-        // Workplace prop
 
-        public Parent()
-        {
-        }
+        public Workplace Workplace { get; set; }
     }
 }
