@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CardinalCare.Model.Context;
-using CardinalCare.Model.Services;
+﻿using CardinalCare.Server.Context;
+using CardinalCare.Server.Service;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +28,15 @@ namespace CardinalCare.Server
             {
                 options.UseSqlServer(Configuration.GetConnectionString("zakops"));
             });
+
+            services.AddScoped<AddressService>();
+            services.AddScoped<ChildService>();
+            services.AddScoped<EnrollmentStatusService>();
+            services.AddScoped<EnrollmentTypeService>();
+            services.AddScoped<GuardianService>();
+            services.AddScoped<InvoiceService>();
+            services.AddScoped<VaccinationFileService>();
+            services.AddScoped<WorkplaceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
