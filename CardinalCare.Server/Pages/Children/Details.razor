@@ -1,0 +1,121 @@
+﻿@page "/children/details/{id}"
+
+<h3>@DetailChild.FirstName @DetailChild.LastName</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Details</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>#</td>
+            <td>@DetailChild.ChildId</td>
+        </tr>
+
+
+        <tr>
+            <td>First</td>
+            <td>@DetailChild.FirstName</td>
+        </tr>
+
+        <tr>
+            <td>Middle</td>
+            <td>@DetailChild.MidName</td>
+        </tr>
+
+        <tr>
+            <td>Last</td>
+            <td>@DetailChild.LastName</td>
+        </tr>
+
+        <tr>
+            <td>Birthday</td>
+            <td>@DetailChild.Birthday</td>
+        </tr>
+
+        <tr>
+            <td>Diet Restriction</td>
+            @if (DetailChild.DietRestrictions != string.Empty)
+            {
+                <td>@DetailChild.DietRestrictions</td>
+            }
+            else
+            {
+                <td>None on file</td>
+            }
+        </tr>
+
+        <tr>
+            <td>Allergies</td>
+            @if (DetailChild.Allergies != string.Empty)
+            {
+                <td>@DetailChild.Allergies</td>
+            }
+            else
+            {
+                <td>None on file</td>
+            }
+        </tr>
+
+        <tr>
+            <td>Vacination record on file</td>
+            <td>@DetailChild.VacinationFile.FileName</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Address</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Street</td>
+            <td>@DetailChild.Address.Street1</td>
+            @if (DetailChild.Address.Street2 == string.Empty)
+            {
+                <td>@DetailChild.Address.Street2</td>
+            }
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td>@DetailChild.Address.City</td>
+        </tr>
+
+        <tr>
+            <td>State</td>
+            <td>@DetailChild.Address.State</td>
+        </tr>
+
+        <tr>
+            <td>Zip</td>
+            <td>@DetailChild.Address.ZipCode</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Parent/Guardian</h3></th>
+        </tr>
+        <tr>
+            <th>Parent/Guardian</th>
+            <th>Contact Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var guardian in DetailChild.Guardians)
+        {
+            <tr>
+                <td>@guardian.FirstName @guardian.LastName</td>
+                <td>@guardian.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>

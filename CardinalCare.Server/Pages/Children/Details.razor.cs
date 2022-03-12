@@ -1,22 +1,24 @@
 ﻿using System;
-using CardinalCare.Model;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
+using CardinalCare.Model;
 using CardinalCare.Server.Service;
+using Microsoft.AspNetCore.Components;
 
 namespace CardinalCare.Server.Pages.Children
 {
-    public partial class Index
+    public partial class Details
     {
         [Inject]
         public ChildService ChildService { get; set; }
 
-        public List<Child> Children { get; set; }
+        public int Id { get; set; }
+        public Child DetailChild { get; set; }
+
 
         protected override async Task OnInitializedAsync()
         {
-            Children = await ChildService.GetChildrenListAsync();
+            DetailChild = await ChildService.GetChildByIdAsync(Id);
         }
     }
 }

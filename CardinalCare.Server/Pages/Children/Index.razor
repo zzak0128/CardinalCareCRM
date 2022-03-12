@@ -16,7 +16,7 @@
         <tr>
             <td>@child.FirstName @child.LastName</td>
             <td>@child.Birthday</td>
-            @if (child.DietRestrictions.Count() > 0)
+            @if (child.DietRestrictions != string.Empty)
             {
                 <td>Diet restrictions exits. View record for details."</td>
             }
@@ -24,7 +24,7 @@
             {
                 <td> No restrictions on file.</td>
             }
-            @if (child.Allergies.Count() > 0)
+            @if (child.Allergies != string.Empty)
             {
                 <td>Allergies on file. View record for details."</td>
             }
