@@ -1,0 +1,44 @@
+﻿@page "/Children"
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Child Name</th>
+            <th>Birthday</th>
+            <th>Diet Restrictions</th>
+            <th>Allergies</th>
+            <th>Parent/Guardian</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var child in Children)
+        {
+        <tr>
+            <td>@child.FirstName @child.LastName</td>
+            <td>@child.Birthday</td>
+            @if (child.DietRestrictions.Count() > 0)
+            {
+                <td>Diet restrictions exits. View record for details."</td>
+            }
+            else
+            {
+                <td> No restrictions on file.</td>
+            }
+            @if (child.Allergies.Count() > 0)
+            {
+                <td>Allergies on file. View record for details."</td>
+            }
+            else
+            {
+                <td> No allergies on file.</td>
+            }
+            @foreach (var guardian in child.Guardians)
+            {
+                <td>@guardian.FirstName @guardian.LastName</td>
+                <td>@guardian.PhoneNumber</td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>
+
