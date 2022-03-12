@@ -1,0 +1,83 @@
+﻿@page "/children/details/delete/{id}"
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Really Delete @ChildToDelete.FirstName @ChildToDelete.LastName</h3></th>
+        </tr>
+        <tr>
+            <th><button class="btn btn-danger" onclick="DeleteChild">Delete</button></th>
+            <th><button class="btn btn-secondary" onclick="CancelToDetail">Cancel</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Child ID</td>
+            <td>@ChildToDelete.ChildId</td>
+        </tr>
+
+        <tr>
+            <td>First Name</td>
+            <td>@ChildToDelete.FirstName</td>
+        </tr>
+
+        <tr>
+            <td>Middle Name</td>
+            <td>@ChildToDelete.MidName</td>
+        </tr>
+
+        <tr>
+            <td>Last Name</td>
+            <td>@ChildToDelete.LastName</td>
+        </tr>
+
+        <tr>
+            <td>Birthday</td>
+            <td>@ChildToDelete.Birthday</td>
+        </tr>
+
+        <tr>
+            <td>Diet Restriction</td>
+            @if (ChildToDelete.DietRestrictions != string.Empty)
+            {
+                <td>@ChildToDelete.DietRestrictions</td>
+            }
+            else
+            {
+                <td>None on file</td>
+            }
+        </tr>
+
+        <tr>
+            <td>Allergies</td>
+            @if (ChildToDelete.Allergies != string.Empty)
+            {
+                <td>@ChildToDelete.DietRestrictions</td>
+            }
+            else
+            {
+                <td>None on file</td>
+            }
+        </tr>
+
+        <tr>
+            <td>Vaccination File</td>
+            <td>@ChildToDelete.VacinationFile.FileName</td>
+        </tr>
+
+        <tr>
+            <td>Address</td>
+            <td>@ChildToDelete.Address.Street1</td>
+        </tr>
+
+        <tr>
+            <td>Parent/Guardian</td>
+            @foreach (var guardian in ChildToDelete.Guardians)
+            {
+                <td>@guardian.FirstName @guardian.LastName</td>
+                <td>@guardian.PhoneNumber</td>
+            }
+        </tr>
+    </tbody>
+</table>
+
