@@ -1,0 +1,71 @@
+﻿@page "/guardians/details/{id}"
+
+<h3>@DetailGuardian.FirstName @DetailGuardian.LastName</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Details</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>#</td>
+            <td>@DetailGuardian.GuardianId</td>
+        </tr>
+
+
+        <tr>
+            <td>First</td>
+            <td>@DetailGuardian.FirstName</td>
+        </tr>
+
+        <tr>
+            <td>Last</td>
+            <td>@DetailGuardian.LastName</td>
+        </tr>
+
+        <tr>
+            <td>Contact Number</td>
+            <td>@DetailGuardian.PhoneNumber</td>
+        </tr>
+
+        <tr>
+            <td>Workplace</td>
+            <td>@DetailGuardian.Workplace.Name</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Address</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Street</td>
+            <td>@DetailGuardian.Address.Title</td>
+            @if (DetailGuardian.Address.Street2 == string.Empty)
+            {
+                <td>@DetailGuardian.Address.Street2</td>
+            }
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td>@DetailGuardian.Address.City</td>
+        </tr>
+
+        <tr>
+            <td>State</td>
+            <td>@DetailGuardian.Address.State</td>
+        </tr>
+
+        <tr>
+            <td>Zip</td>
+            <td>@DetailGuardian.Address.ZipCode</td>
+        </tr>
+    </tbody>
+</table>

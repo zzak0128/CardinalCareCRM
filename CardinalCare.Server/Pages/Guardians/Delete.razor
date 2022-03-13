@@ -1,0 +1,45 @@
+﻿@page "/guardians/details/delete/{id}"
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><h3>Really Delete @GuardianToDelete.FirstName @GuardianToDelete.LastName</h3></th>
+        </tr>
+        <tr>
+            <th><button class="btn btn-danger" onclick="DeleteGuardian">Delete</button></th>
+            <th><button class="btn btn-secondary" onclick="CancelToDetail">Cancel</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Guardian ID</td>
+            <td>@GuardianToDelete.GuardianId</td>
+        </tr>
+
+        <tr>
+            <td>First Name</td>
+            <td>@GuardianToDelete.FirstName</td>
+        </tr>
+
+        <tr>
+            <td>Last Name</td>
+            <td>@GuardianToDelete.LastName</td>
+        </tr>
+
+        <tr>
+            <td>Address</td>
+            <td>@GuardianToDelete.Address.Title</td>
+        </tr>
+
+        <tr>
+            <td>Contact Number</td>
+            <td>@GuardianToDelete.PhoneNumber</td>
+        </tr>
+
+        <tr>
+            <td>Workplace</td>
+            <td>@GuardianToDelete.Workplace.Name</td>
+        </tr>
+    </tbody>
+</table>
+

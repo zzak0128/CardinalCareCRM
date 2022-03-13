@@ -19,6 +19,7 @@
     <None Remove="Pages\Addresses\" />
     <None Remove="Blazored.Modal" />
     <None Remove="Component\" />
+    <None Remove="Pages\Guardians\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
@@ -27,6 +28,7 @@
     <Folder Include="Pages\Children\" />
     <Folder Include="Pages\Addresses\" />
     <Folder Include="Components\" />
+    <Folder Include="Pages\Guardians\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Model.csproj">

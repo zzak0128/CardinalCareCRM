@@ -4,14 +4,16 @@ using CardinalCare.Server.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CardinalCare.Server.Migrations
 {
     [DbContext(typeof(ZakOpsDb))]
-    partial class ZakOpsDbModelSnapshot : ModelSnapshot
+    [Migration("20220313022716_UpdateClassAnnotations")]
+    partial class UpdateClassAnnotations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

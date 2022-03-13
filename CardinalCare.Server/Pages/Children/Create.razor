@@ -3,6 +3,9 @@
 <h3>Add new child</h3>
 
 <EditForm Model="@NewChild" OnValidSubmit="@SaveChild">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
     <div class="form-group">
         <label for="id" class="form-label">#</label>
         <InputNumber class="form-control" id="id" @bind-Value="@NewChild.ChildId" disabled />

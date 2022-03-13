@@ -1,0 +1,55 @@
+﻿@page "/guardians/register"
+
+<h3>Add new child</h3>
+
+<EditForm Model="@NewGuardian" OnValidSubmit="@SaveGuardian">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="id" class="form-label">#</label>
+        <InputNumber class="form-control" id="id" @bind-Value="@NewGuardian.GuardianId" disabled />
+    </div>
+
+    <div class="form-group">
+        <label for="first-name" class="form-label">First Name</label>
+        <InputText class="form-control" id="first-Name" @bind-Value="@NewGuardian.FirstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="last-name" class="form-label">Last Name</label>
+        <InputText class="form-control" id="last-Name" @bind-Value="@NewGuardian.LastName" />
+    </div>
+
+    <div class="form-group">
+        <label for="address" class="form-label">Address</label>
+        <InputSelect class="form-control" id="address" @bind-Value="@NewGuardian.Address">
+            @foreach (var address in Addresses)
+            {
+                <option>@address.Title</option>
+            }
+        </InputSelect>
+        <button type="button" class="btn btn-primary" onclick="NavigateToNewAddress">New Address</button>
+    </div>
+
+    <div class="form-group">
+        <label for="phone" class="form-label">Contact Number</label>
+        <InputText class="form-control" id="phone" @bind-Value="@NewGuardian.PhoneNumber" />
+    </div>
+
+    <div class="form-group">
+        <label for="work" class="form-label">Workplace</label>
+        <InputSelect class="form-control" id="work" @bind-Value="@NewGuardian.Workplace">
+            @foreach (var workplace in Workplaces)
+            {
+                <option>@workplace.Name</option>
+            }
+        </InputSelect>
+        <button type="button" class="btn btn-primary" @onclick="NavigateToNewWorkplace">New Workplace</button>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create</button>
+        <button class="btn btn-secondary" type="button" @onclick="NavigateBack">Back</button>
+    </div>
+</EditForm>
