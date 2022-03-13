@@ -1,14 +1,17 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using CardinalCare.Model.Interface;
 
 namespace CardinalCare.Model
 {
-    public class Address
+    public class Address : IMultiListSelectable
     {
         [Key]
         public int AddressId { get; set; }
         [StringLength(250)]
-        public string Street1 { get; set; }
+        [Column("Street1")]
+        public string Title { get; set; }
         [StringLength(100)]
         public string Street2 { get; set; }
         [StringLength(50)]

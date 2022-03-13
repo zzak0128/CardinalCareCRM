@@ -18,6 +18,7 @@
     <None Remove="Pages\Children\" />
     <None Remove="Pages\Addresses\" />
     <None Remove="Blazored.Modal" />
+    <None Remove="Component\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
@@ -25,12 +26,10 @@
     <Folder Include="Pages\Workplaces\" />
     <Folder Include="Pages\Children\" />
     <Folder Include="Pages\Addresses\" />
+    <Folder Include="Components\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Model.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-    <ProjectReference Include="..\CardinalCare.Components\CardinalCare.Components.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

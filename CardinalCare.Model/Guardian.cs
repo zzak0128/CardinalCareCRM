@@ -1,9 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using CardinalCare.Model.Interface;
 
 namespace CardinalCare.Model
 {
-    public class Guardian
+    public class Guardian: IMultiListSelectable
     {
         [Key]
         public int GuardianId { get; set; }
@@ -16,5 +17,13 @@ namespace CardinalCare.Model
         public string PhoneNumber { get; set; }
 
         public Workplace Workplace { get; set; }
+
+        [NotMapped]
+        public string Title { get; set; }
+
+        public Guardian()
+        {
+            Title = $"{FirstName} {LastName}";
+        }
     }
 }
