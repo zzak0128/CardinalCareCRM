@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Server", "Card
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Model", "CardinalCare.Model\CardinalCare.Model.csproj", "{8B2AA755-1149-4F2E-84A0-193A9CAAD81F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Components", "CardinalCare.Components\CardinalCare.Components.csproj", "{736EEFDE-272C-4C8F-A5B4-2995266A5033}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8B2AA755-1149-4F2E-84A0-193A9CAAD81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B2AA755-1149-4F2E-84A0-193A9CAAD81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B2AA755-1149-4F2E-84A0-193A9CAAD81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736EEFDE-272C-4C8F-A5B4-2995266A5033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736EEFDE-272C-4C8F-A5B4-2995266A5033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736EEFDE-272C-4C8F-A5B4-2995266A5033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736EEFDE-272C-4C8F-A5B4-2995266A5033}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

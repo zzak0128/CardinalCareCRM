@@ -14,10 +14,10 @@ namespace CardinalCare.Server.Pages.Children
         [Inject]
         public AddressService AddressService { get; set; }
         [Inject]
-        public NavigationManager navManager { get; set; }
+        public NavigationManager NavManager { get; set; }
 
         public Child NewChild { get; set; } = new Child();
-        public List<Address> Addresses { get; set; }
+        public List<Address> Addresses { get; set; } = new List<Address>();
 
         protected override async Task OnInitializedAsync()
         {
@@ -32,11 +32,12 @@ namespace CardinalCare.Server.Pages.Children
         private void NavigateToNewAddress()
         {
             // TODO: Create model to add a new address
+            NavManager.NavigateTo("/address/create");
         }
 
         private void NavigateBack()
         {
-            navManager.NavigateTo("/children");
+            NavManager.NavigateTo("/children");
         }
     }
 }

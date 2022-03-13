@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Components\" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Context\" />
     <None Remove="Services\" />
@@ -17,16 +16,21 @@
     <None Remove="Pages\Workplace\" />
     <None Remove="Pages\Workplaces\" />
     <None Remove="Pages\Children\" />
+    <None Remove="Pages\Addresses\" />
+    <None Remove="Blazored.Modal" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\" />
     <Folder Include="Context\" />
     <Folder Include="Service\" />
     <Folder Include="Pages\Workplaces\" />
     <Folder Include="Pages\Children\" />
+    <Folder Include="Pages\Addresses\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Model.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\CardinalCare.Components\CardinalCare.Components.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

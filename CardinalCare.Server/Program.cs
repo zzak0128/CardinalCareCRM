@@ -24,5 +24,6 @@ namespace CardinalCare.Server
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        
     }
 }

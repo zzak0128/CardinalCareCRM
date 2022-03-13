@@ -1,19 +1,21 @@
 ﻿@page "/Children"
 
-@if (Children.Any())
-{
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th>Child Name</th>
-                <th>Birthday</th>
-                <th>Diet Restrictions</th>
-                <th>Allergies</th>
-                <th>Parent/Guardian</th>
-            </tr>
-        </thead>
-        <tbody>
-
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th><button class="btn btn-primary" @onclick="NavigateToCreate">Register New</button></th>
+        </tr>
+        <tr>
+            <th>Child Name</th>
+            <th>Birthday</th>
+            <th>Diet Restrictions</th>
+            <th>Allergies</th>
+            <th>Parent/Guardian</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Children.Any())
+        {
             @foreach (var child in Children)
             {
                 <tr>
@@ -43,14 +45,13 @@
 
                 </tr>
             }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5"><h3>No children are currently registered</h3></td>
+            </tr>
+        }
 
-        </tbody>
-    </table>
-
-}
-else
-{
- <h3>There are no children registered</h3>
-}
-
-
+    </tbody>
+</table>

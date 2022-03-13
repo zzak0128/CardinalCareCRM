@@ -1,78 +1,75 @@
-﻿@page "/children/add-new"
+﻿@page "/children/register"
 
 <h3>Add new child</h3>
 
 <EditForm Model="@NewChild" OnValidSubmit="@SaveChild">
-    <div class="input-group">
-        <label for="id">#</label>
-        <InputNumber id="id" @bind-Value="@NewChild.ChildId" disabled />
+    <div class="form-group">
+        <label for="id" class="form-label">#</label>
+        <InputNumber class="form-control" id="id" @bind-Value="@NewChild.ChildId" disabled />
     </div>
 
-    <div class="input-group">
-        <label for="first-name">First Name</label>
-        <InputText id="first-Name" @bind-Value="@NewChild.FirstName" />
+    <div class="form-group">
+        <label for="first-name" class="form-label">First Name</label>
+        <InputText class="form-control" id="first-Name" @bind-Value="@NewChild.FirstName" />
     </div>
 
-    <div class="input-group">
-        <label for="mid-name">Middle Name</label>
-        <InputText id="mid-Name" @bind-Value="@NewChild.MidName" />
-
+    <div class="form-group">
+        <label for="mid-name" class="form-label">Middle Name</label>
+        <InputText class="form-control" id="mid-Name" @bind-Value="@NewChild.MidName" />
     </div>
 
-
-    <div class="input-group">
-        <label for="last-name">Last Name</label>
-        <InputText id="last-Name" @bind-Value="@NewChild.LastName" />
+    <div class="form-group">
+        <label for="last-name" class="form-label">Last Name</label>
+        <InputText class="form-control" id="last-Name" @bind-Value="@NewChild.LastName" />
     </div>
 
-    <div class="input-group">
-        <label for="b-day">Birthday</label>
-        <InputDate id="b-day" @bind-Value="@NewChild.Birthday" />
-
+    <div class="form-group">
+        <label for="b-day" class="form-label">Birthday</label>
+        <InputDate class="form-control" id="b-day" @bind-Value="@NewChild.Birthday" />
     </div>
 
-
-    <div class="input-group">
-        <label for="diet">Diet Restrictions</label>
-        <InputTextArea id="diet" @bind-Value="@NewChild.DietRestrictions" />
-
+    <div class="form-group">
+        <label for="diet" class="form-label">Diet Restrictions</label>
+        <InputTextArea class="form-control" id="diet" @bind-Value="@NewChild.DietRestrictions" />
     </div>
 
-
-    <div class="input-group">
-        <label for="allergies">Allergies</label>
-        <InputTextArea id="allergies" @bind-Value="@NewChild.Allergies" />
-
+    <div class="form-group">
+        <label for="allergies" class="form-label">Allergies</label>
+        <InputTextArea class="form-control" id="allergies" @bind-Value="@NewChild.Allergies" />
     </div>
 
-    <div class="input-group">
-        <label for="vac-file">Upload proof of Vaccination</label>
+    <div class="form-group">
+        <label for="vac-file" class="form-label">Upload proof of Vaccination</label>
         <div class="input-group mb-3">
             <input type="file" class="form-control" id="vac-file">
             <label class="input-group-text" for="vac-file">Upload</label>
         </div>
     </div>
 
-    <div class="input-group">
-        <label for="address">Address</label>
-        <InputSelect id="address" @bind-Value="@NewChild.Address">
+    <div class="form-group">
+
+        <label for="address" class="form-label">Address</label>
+        <InputSelect class="form-control" id="address" @bind-Value="@NewChild.Address">
             @foreach (var address in Addresses)
             {
                 <option>@address.Street1</option>
             }
         </InputSelect>
-        <button type="button" onclick="NavigateToNewAddress">New Address</button>
     </div>
 
-    @*TODO: Update this to use my select group comonent form Amazon Return Orders*@
-    <div class="input-group">
-        <label for="guardian">Parent/Guardian</label>
-        <InputSelect id="guardian" @bind-Value="@NewChild.Guardians" />
+    <div class="form-group">
+
+        <button type="button" class="btn btn-primary" onclick="NavigateToNewAddress">New Address</button>
     </div>
 
-    <div class="input-group">
+    @*TODO: Update this to use my select group comonent from Amazon Return Orders*@
+    <div class="form-group">
+        <label for="guardian" class="form-label">Parent/Guardian</label>
+        <InputSelect class="form-control" id="guardian" @bind-Value="@NewChild.Guardians" />
+    </div>
+
+    <div class="form-group">
         <button class="btn btn-primary" type="submit">Create</button>
         <button class="btn btn-secondary" type="button" onclick="NavigateBack">Back</button>
     </div>
-
 </EditForm>
