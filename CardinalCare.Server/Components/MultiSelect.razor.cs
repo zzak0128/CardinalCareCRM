@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using CardinalCare.Model.Interface;
+﻿using System.Collections.Generic;
+using CardinalCare.Domain.Interfaces;
 using Microsoft.AspNetCore.Components;
 
-namespace CardinalCare.Server.Components
+namespace CardinalCare.Web.Blazor.Components
 {
     public partial class MultiSelect
     {

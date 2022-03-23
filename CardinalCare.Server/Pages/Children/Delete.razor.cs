@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using CardinalCare.Model;
-using CardinalCare.Server.Service;
+using CardinalCare.Domain;
+using CardinalCare.Infrastructure.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace CardinalCare.Server.Pages.Children
+namespace CardinalCare.Web.Blazor.Pages.Children
 {
     public partial class Delete
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CardinalCare.Model;
-using CardinalCare.Server.Service;
+using CardinalCare.Domain;
+using CardinalCare.Infrastructure.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace CardinalCare.Server.Pages.Guardians
+namespace CardinalCare.Web.Blazor.Pages.Guardians
 {
     public partial class Details
     {

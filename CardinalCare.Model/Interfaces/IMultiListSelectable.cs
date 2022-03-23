@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CardinalCare.Model.Interface
+namespace CardinalCare.Domain.Interfaces
 {
     public interface IMultiListSelectable
     {

@@ -1,11 +1,11 @@
 ﻿using System;
-using CardinalCare.Model;
+using CardinalCare.Domain;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
-using CardinalCare.Server.Service;
+using CardinalCare.Infrastructure.Services;
 
-namespace CardinalCare.Server.Pages.Children
+namespace CardinalCare.Web.Blazor.Pages.Children
 {
     public partial class Index
     {

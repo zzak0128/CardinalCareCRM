@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CardinalCare.Model.Interface;
+using CardinalCare.Domain.Interfaces;
 
-namespace CardinalCare.Model
+namespace CardinalCare.Domain
 {
     public class Guardian: IMultiListSelectable
     {

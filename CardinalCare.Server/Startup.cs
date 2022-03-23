@@ -1,5 +1,5 @@
-﻿using CardinalCare.Server.Context;
-using CardinalCare.Server.Service;
+﻿using CardinalCare.Infrastructure.Context;
+using CardinalCare.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CardinalCare.Server
+namespace CardinalCare.Web.Blazor
 {
     public class Startup
     {

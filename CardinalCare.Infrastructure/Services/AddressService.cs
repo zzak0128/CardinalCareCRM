@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CardinalCare.Model;
-using CardinalCare.Server.Context;
+using CardinalCare.Domain;
+using CardinalCare.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace CardinalCare.Server.Service
+namespace CardinalCare.Infrastructure.Services
 {
     public class AddressService
     {

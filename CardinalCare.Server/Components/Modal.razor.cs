@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
-namespace CardinalCare.Server.Components
+namespace CardinalCare.Web.Blazor.Components
 {
     public partial class Modal
     {

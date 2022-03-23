@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace CardinalCare.Model
+namespace CardinalCare.Domain
 {
     public class Invoice
     {

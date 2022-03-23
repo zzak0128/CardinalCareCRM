@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CardinalCare.Server
+namespace CardinalCare.Web.Blazor
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CardinalCare.Model
+namespace CardinalCare.Domain
 {
     public class EnrollmentType
     {

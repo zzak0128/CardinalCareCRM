@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CardinalCare.Model;
+using CardinalCare.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace CardinalCare.Server.Context
+namespace CardinalCare.Infrastructure.Context
 {
     public class ZakOpsDb : DbContext
     {
@@ -13,6 +13,7 @@ namespace CardinalCare.Server.Context
         {
         }
 
+        #region DbSet
         public DbSet<Child> Children { get; set; }
         public DbSet<Guardian> Guardians { get; set; }
         public DbSet<Address> Addresses { get; set; }
@@ -21,9 +22,6 @@ namespace CardinalCare.Server.Context
         public DbSet<Workplace> Workplaces { get; set; }
         public DbSet<EnrollmentStatus> Enrollment { get; set; }
         public DbSet<EnrollmentType> EnrollmentTypes { get; set; }
-
-        #region DbSet
-
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

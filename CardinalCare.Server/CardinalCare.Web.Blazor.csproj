@@ -4,9 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'CardinalCare.Server' " />
   <ItemGroup>
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
-    <None Remove="Context\" />
     <None Remove="Services\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
@@ -20,33 +20,22 @@
     <None Remove="Blazored.Modal" />
     <None Remove="Component\" />
     <None Remove="Pages\Guardians\" />
+    <None Remove="Migrations\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Service\" />
     <Folder Include="Pages\Workplaces\" />
     <Folder Include="Pages\Children\" />
     <Folder Include="Pages\Addresses\" />
     <Folder Include="Components\" />
     <Folder Include="Pages\Guardians\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Model.csproj">
+    <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Domain.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.22" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.22">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.21" />
+    <ProjectReference Include="..\CardinalCare.Infrastructure\CardinalCare.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

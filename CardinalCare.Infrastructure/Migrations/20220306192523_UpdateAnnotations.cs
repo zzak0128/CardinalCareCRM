@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CardinalCare.Server.Migrations
+namespace CardinalCare.Infrastructure.Migrations
 {
     public partial class UpdateAnnotations : Migration
     {

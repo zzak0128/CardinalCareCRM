@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using CardinalCare.Model;
+using CardinalCare.Domain;
 using Microsoft.AspNetCore.Components;
 
-namespace CardinalCare.Server.Pages.Workplaces
+namespace CardinalCare.Web.Blazor.Pages.Workplaces
 {
     public partial class Index
     {

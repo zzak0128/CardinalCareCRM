@@ -1,12 +1,12 @@
 ﻿using System;
 using Microsoft.AspNetCore.Components;
-using CardinalCare.Server.Service;
-using CardinalCare.Model;
+using CardinalCare.Infrastructure.Services;
+using CardinalCare.Domain;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using CardinalCare.Model.Interface;
+using CardinalCare.Domain.Interfaces;
 
-namespace CardinalCare.Server.Pages.Children
+namespace CardinalCare.Web.Blazor.Pages.Children
 {
     public partial class Create
     {
