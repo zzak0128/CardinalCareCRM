@@ -1,0 +1,36 @@
+﻿@page "/address/create"
+<h3>Add a new address</h3>
+
+<EditForm Model="NewAddress" OnValidSubmit="SaveAddressAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="street1" class="form-label">Address Line 1</label>
+        <InputText id="street1" class="form-control" @bind-Value="NewAddress.Title" />
+    </div>
+
+    <div class="form-group">
+        <label for="street2" class="form-label">Street 2</label>
+        <InputText id="street2" class="form-control" @bind-Value="NewAddress.Street2" />
+    </div>
+
+    <div class="form-group">
+        <label for="city" class="form-label">City</label>
+        <InputText id="city" class="form-control" @bind-Value="NewAddress.City" />
+    </div>
+
+    <div class="form-group">
+        <label for="state" class="form-label">State</label>
+        <InputText id="state" class="form-control" @bind-Value="NewAddress.State" />
+    </div>
+    <div class="form-group">
+        <label for="zip" class="form-label">Zip Code</label>
+        <InputText id="zip" class="form-control" @bind-Value="NewAddress.ZipCode" />
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-secondary" type="button" @onclick="NavigateBack">Cancel</button>
+    </div>
+</EditForm>

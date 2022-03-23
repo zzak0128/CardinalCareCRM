@@ -1,0 +1,27 @@
+﻿@page "/workplaces/create"
+<h3>Add a new workplace</h3>
+
+<EditForm Model="NewWorkplace" OnValidSubmit="SaveWorkplaceAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <InputText id="name" class="form-control" @bind-Value="NewWorkplace.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="city" class="form-label">City</label>
+        <InputText id="city" class="form-control" @bind-Value="NewWorkplace.City"  />
+    </div>
+
+    <div class="form-group">
+        <label for="phone" class="form-label">Phone Number</label>
+        <InputText id="phone" class="form-control" @bind-Value="NewWorkplace.PhoneNumber" />
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-secondary" type="button" @onclick="NavigateBack">Cancel</button>
+    </div>
+</EditForm>

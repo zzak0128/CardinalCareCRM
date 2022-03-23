@@ -1,6 +1,6 @@
 ﻿@page "/guardians/register"
 
-<h3>Add new child</h3>
+<h3>Add new Guardian</h3>
 
 <EditForm Model="@NewGuardian" OnValidSubmit="@SaveGuardian">
     <DataAnnotationsValidator />
@@ -23,12 +23,8 @@
 
     <div class="form-group">
         <label for="address" class="form-label">Address</label>
-        <InputSelect class="form-control" id="address" @bind-Value="@NewGuardian.Address">
-            @foreach (var address in Addresses)
-            {
-                <option>@address.Title</option>
-            }
-        </InputSelect>
+        <SingleSelect ItemName="Address" Items="Addresses" @bind-SelectedItem="SelectedAddress"/>
+
         <button type="button" class="btn btn-primary" onclick="NavigateToNewAddress">New Address</button>
     </div>
 
@@ -39,12 +35,7 @@
 
     <div class="form-group">
         <label for="work" class="form-label">Workplace</label>
-        <InputSelect class="form-control" id="work" @bind-Value="@NewGuardian.Workplace">
-            @foreach (var workplace in Workplaces)
-            {
-                <option>@workplace.Name</option>
-            }
-        </InputSelect>
+        <SingleSelect ItemName="Workplace" Items="Workplaces" @bind-SelectedItem="SelectedWorkplace" />
         <button type="button" class="btn btn-primary" @onclick="NavigateToNewWorkplace">New Workplace</button>
     </div>
 

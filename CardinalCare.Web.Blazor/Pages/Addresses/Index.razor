@@ -1,0 +1,43 @@
+﻿@page "/address"
+
+<table class="table table-striped">
+    <thead>
+        <tr class="table-primary">
+            <th colspan="6"><h3>Addresses</h3></th>
+        </tr>
+        <tr>
+            <th><button class="btn btn-primary" @onclick="NavigateToCreate">Add New</button></th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (AllAddresses.Any())
+        {
+            @foreach (var address in AllAddresses)
+            {
+                <tr>
+                    <td>@address.AddressId</td>
+                    <td>@address.Title</td>
+                    <td>@address.Street2</td>
+                    <td>@address.City</td>
+                    <td>@address.State</td>
+                    <td>@address.ZipCode</td>
+                    <td><button class="btn btn-danger" @onclick="() => DeleteAddressAsync(address)">Delete</button></td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4"><h4>No addresses on file</h4></td>
+            </tr>
+        }
+    </tbody>
+</table>

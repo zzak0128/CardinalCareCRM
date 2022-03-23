@@ -19,7 +19,7 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CardinalCare.Model\CardinalCare.Domain.csproj" />
+    <ProjectReference Include="..\CardinalCare.Domain\CardinalCare.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.23" />

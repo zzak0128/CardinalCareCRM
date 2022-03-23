@@ -9,9 +9,11 @@
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
     <None Remove="Microsoft.NETCore.App" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
-    <None Remove="Interface\" />
+    <None Remove="Entities\" />
+    <None Remove="Attributes\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interface\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Attributes\" />
   </ItemGroup>
 </Project>

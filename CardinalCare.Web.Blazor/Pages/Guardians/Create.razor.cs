@@ -4,6 +4,7 @@ using CardinalCare.Infrastructure.Services;
 using CardinalCare.Domain;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using CardinalCare.Domain.Interfaces;
 
 namespace CardinalCare.Web.Blazor.Pages.Guardians
 {
@@ -16,7 +17,9 @@ namespace CardinalCare.Web.Blazor.Pages.Guardians
 
         public Guardian NewGuardian { get; set; } = new Guardian();
         public List<Address> Addresses { get; set; } = new List<Address>();
+        public ISingleSelect SelectedAddress { get; set; } = new Address();
         public List<Workplace> Workplaces { get; set; } = new List<Workplace>();
+        public ISingleSelect SelectedWorkplace { get; set; } = new Workplace();
 
         protected override async Task OnInitializedAsync()
         {
@@ -26,6 +29,8 @@ namespace CardinalCare.Web.Blazor.Pages.Guardians
 
         private async Task SaveGuardian()
         {
+            NewGuardian.Address = SelectedAddress as Address;
+            NewGuardian.Workplace = SelectedWorkplace as Workplace;
             await GuardianService.AddGuardianAsync(NewGuardian);
         }
 

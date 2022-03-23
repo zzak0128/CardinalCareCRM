@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Web.Blazor", "CardinalCare.Server\CardinalCare.Web.Blazor.csproj", "{58AD6CC2-7616-4501-B9F6-179B56FC5FDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Web.Blazor", "CardinalCare.Web.Blazor\CardinalCare.Web.Blazor.csproj", "{58AD6CC2-7616-4501-B9F6-179B56FC5FDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Domain", "CardinalCare.Model\CardinalCare.Domain.csproj", "{8B2AA755-1149-4F2E-84A0-193A9CAAD81F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Domain", "CardinalCare.Domain\CardinalCare.Domain.csproj", "{8B2AA755-1149-4F2E-84A0-193A9CAAD81F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardinalCare.Infrastructure", "CardinalCare.Infrastructure\CardinalCare.Infrastructure.csproj", "{6F4A1015-16EE-44C6-A265-144C62AD1D5A}"
 EndProject
